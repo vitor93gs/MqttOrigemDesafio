@@ -48,6 +48,4 @@ client.on('message', function (topic, message) {
 	console.log('Received message:', topic, message.toString());
 });
 
-Bike.state === 'on'
-	? client.publish(`bike/telemetry/${chassi}`, JSON.stringify(Bike))
-	: null;
+client.publish(`bike/telemetry/${chassi}`, JSON.stringify(Bike))
