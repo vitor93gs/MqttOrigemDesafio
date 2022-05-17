@@ -20,8 +20,8 @@ client.on('error', function (error) {
 	console.log(error);
 });
 
-// const newConnection = 'toggleBike';
-// client.subscribe(newConnection);
+const newConnection = 'bike/telemetry/#';
+client.subscribe(newConnection);
 
 var Battery = {
 	Id: 0,
